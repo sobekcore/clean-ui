@@ -14,9 +14,13 @@ export default {
     ]
   },
   css: [
-    "~/assets/globals.css",
-    "~/assets/variables.scss"
+    "~/assets/globals.css"
   ],
+  styleResources: {
+    scss: [
+      "~/assets/variables.scss"
+    ]
+  },
   components: true,
   buildModules: [
     "@nuxtjs/eslint-module",
