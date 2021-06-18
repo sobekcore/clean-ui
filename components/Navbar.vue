@@ -7,7 +7,7 @@
           <span class="logo-text">Clean UI</span>
         </div>
       </a>
-      <a class="link" href="/start">
+      <a class="link" href="/">
         <div class="navbar-item">Home</div>
       </a>
       <a class="link" href="/about">
@@ -37,7 +37,7 @@
     .link {
       .navbar-item {
         padding: 18px 22px;
-        transition: background 0.15s;
+        transition: background 0.2s;
 
         &:hover {
           background: $light-gray;

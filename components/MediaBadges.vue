@@ -17,7 +17,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 110px;
+  margin-left: 20px;
+  max-width: 486px;
+  height: 114px;
 
   .badge {
     margin: 0 5px;

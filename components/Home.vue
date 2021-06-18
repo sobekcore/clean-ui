@@ -4,7 +4,9 @@
       <img class="home-img" src="~/assets/images/logo.png" />
       <div class="home-text">
         <h1 class="home-title">Clean UI</h1>
-        <button class="home-button">Get started</button>
+        <a class="home-button-link" href="/start">
+          <button class="home-button">Get started</button>
+        </a>
       </div>
       <div class="home-media">
         <MediaBadges />
@@ -16,21 +18,22 @@
 <style scoped lang="scss">
 .wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: calc(100vh - 60px);
-  padding: 20px 20px 34vh;
+  padding-bottom: 34vh;
 
   @media (max-height: 760px) {
-    padding: 20px;
+    padding-bottom: 0;
+    margin-top: 22px;
   }
 
   .home {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
 
     .home-img {
-      margin-left: 5px;
       height: 230px;
       width: 230px;
     }
@@ -49,28 +52,29 @@
         margin: 0 20px 20px;
       }
 
-      .home-button {
-        padding: 14px 38px;
-        border-radius: 8px;
-        border: 2px solid $main-pink;
-        font-family: "Open Sans", sans-serif;
-        font-size: 19px;
-        color: $main-pink;
-        background: white;
-        transition: 0.2s ease-out;
-        outline: none;
+      .home-button-link {
+        .home-button {
+          padding: 14px 38px;
+          border-radius: 8px;
+          border: 2px solid $main-pink;
+          font-family: "Open Sans", sans-serif;
+          font-size: 19px;
+          color: $main-pink;
+          background: white;
+          transition: 0.2s ease-out;
+          outline: none;
 
-        &:hover {
-          background: $main-pink;
-          color: white;
-          cursor: pointer;
+          &:hover {
+            background: $main-pink;
+            color: white;
+            cursor: pointer;
+          }
         }
       }
     }
 
     .home-media {
       grid-column: 1 / span 2;
-      text-align: center;
     }
   }
 }
