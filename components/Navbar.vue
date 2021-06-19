@@ -1,21 +1,24 @@
 <template>
   <div class="margin">
     <nav class="navbar">
-      <a class="link" href="/">
+      <nuxt-link class="link home" to="/">
         <div class="logo">
           <img class="logo-img" src="~/assets/images/logo.png" />
           <span class="logo-text">Clean UI</span>
         </div>
-      </a>
-      <a class="link" href="/">
-        <div class="navbar-item">Home</div>
-      </a>
-      <a class="link" href="/about">
-        <div class="navbar-item">About</div>
-      </a>
-      <a class="link" href="/components">
+      </nuxt-link>
+      <nuxt-link class="link" to="/features">
+        <div class="navbar-item">Features</div>
+      </nuxt-link>
+      <nuxt-link class="link" to="/usage">
+        <div class="navbar-item">Usage</div>
+      </nuxt-link>
+      <nuxt-link class="link" to="/components">
         <div class="navbar-item">Components</div>
-      </a>
+      </nuxt-link>
+      <nuxt-link class="link" to="/support">
+        <div class="navbar-item">Support</div>
+      </nuxt-link>
     </nav>
   </div>
 </template>
@@ -61,6 +64,14 @@
           font-size: 24px;
         }
       }
+    }
+
+    .home.nuxt-link-active {
+      color: $main-black;
+    }
+
+    .nuxt-link-active {
+      color: $main-pink;
     }
   }
 }

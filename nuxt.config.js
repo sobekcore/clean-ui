@@ -13,6 +13,7 @@ export default {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ]
   },
+  components: false,
   css: [
     "~/assets/globals.css"
   ],
@@ -21,7 +22,6 @@ export default {
       "~/assets/variables.scss"
     ]
   },
-  components: true,
   buildModules: [
     "@nuxtjs/eslint-module",
     "@nuxtjs/style-resources"

@@ -1,18 +1,18 @@
 <template>
   <div id="wrapper">
     <Navbar />
-    <Home />
+    <Support />
   </div>
 </template>
 
 <script>
-import Navbar from "~/components/Navbar.vue";
-import Home from "~/components/content/Home.vue";
+import Navbar from "../components/Navbar.vue";
+import Support from "~/components/content/Support.vue";
 
 export default {
   components: {
     Navbar,
-    Home,
+    Support,
   },
 };
 </script>
