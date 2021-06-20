@@ -1,6 +1,7 @@
 /** Global stylesheet fonts **/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 /** Global stylesheet styling **/
 * {
@@ -20,6 +21,7 @@ body {
   margin: 0;
 }
 
+span.material-icons,
 img {
   user-select: none;
 }

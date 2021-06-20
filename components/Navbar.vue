@@ -1,24 +1,24 @@
 <template>
   <div class="margin">
     <nav class="navbar">
-      <nuxt-link class="link home" to="/">
+      <NuxtLink class="link home" to="/">
         <div class="logo">
           <img class="logo-img" src="~/assets/images/logo.png" />
           <span class="logo-text">Clean UI</span>
         </div>
-      </nuxt-link>
-      <nuxt-link class="link" to="/features">
+      </NuxtLink>
+      <NuxtLink class="link" to="/features">
         <div class="navbar-item">Features</div>
-      </nuxt-link>
-      <nuxt-link class="link" to="/usage">
+      </NuxtLink>
+      <NuxtLink class="link" to="/usage">
         <div class="navbar-item">Usage</div>
-      </nuxt-link>
-      <nuxt-link class="link" to="/components">
+      </NuxtLink>
+      <NuxtLink class="link" to="/components">
         <div class="navbar-item">Components</div>
-      </nuxt-link>
-      <nuxt-link class="link" to="/support">
+      </NuxtLink>
+      <NuxtLink class="link" to="/support">
         <div class="navbar-item">Support</div>
-      </nuxt-link>
+      </NuxtLink>
     </nav>
   </div>
 </template>

@@ -1,0 +1,22 @@
+<template>
+  <article class="component-content">
+    <slot name="content"></slot>
+  </article>
+</template>
+
+<style scoped lang="scss">
+.component-content {
+  background: white;
+  border-bottom: 2px solid $light-gray;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+  padding: 22px 20px;
+
+  @media (max-width: $medium-content) {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%), inset 0 1px 3px rgb(0 0 0 / 10%);
+  }
+
+  .component-section-header:not(:first-child) {
+    margin: 34px 0 8px;
+  }
+}
+</style>

@@ -1,0 +1,40 @@
+<template>
+  <section class="component-section">
+    <div class="component-section-header">
+      <h3 class="component-section-title">
+        <slot name="title" />
+      </h3>
+      <hr class="component-section-line" />
+    </div>
+    <p class="component-section-text">
+      <slot name="text" />
+    </p>
+  </section>
+</template>
+
+<style scoped lang="scss">
+.component-section {
+  .component-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    width: 100%;
+
+    .component-section-title {
+      font: 22px "IBM Plex Sans", sans-serif;
+      font-weight: normal;
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    .component-section-line {
+      border: none;
+      background: $light-gray;
+      border-radius: 6px;
+      margin-left: 12px;
+      width: 100%;
+      height: 3px;
+    }
+  }
+}
+</style>
