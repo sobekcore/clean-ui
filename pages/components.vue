@@ -1,10 +1,6 @@
 <template>
-  <div v-if="$nuxt.$route.path == '/components'">
-    <Components />
-  </div>
-  <div v-else>
-    <NuxtChild />
-  </div>
+  <Components v-if="$nuxt.$route.path == '/components'" />
+  <NuxtChild v-else />
 </template>
 
 <script>

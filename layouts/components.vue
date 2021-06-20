@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <Navbar />
-    <ComponentsNavbar />
+    <ComponentsSidebar />
     <main class="content">
       <Nuxt />
     </main>
@@ -10,18 +10,18 @@
 
 <script>
 import Navbar from "~/components/Navbar.vue";
-import ComponentsNavbar from "~/components/ComponentsNavbar.vue";
+import ComponentsSidebar from "~/components/components/ComponentsSidebar.vue";
 
 export default {
   components: {
     Navbar,
-    ComponentsNavbar,
+    ComponentsSidebar,
   },
 };
 </script>
 
 <style scoped lang="scss">
 .content {
-  margin-left: 122px;
+  margin-left: 138px;
 }
 </style>

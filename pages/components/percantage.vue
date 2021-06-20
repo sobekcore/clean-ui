@@ -1,12 +1,15 @@
 <template>
-  <div>
-    <h1 class="title">Percantage</h1>
+  <div class="component">
+    <h1 class="component-title">Percantage</h1>
   </div>
 </template>
 
 <style scoped lang="scss">
-.title {
-  text-align: center;
-  font-size: 26px;
+.component {
+  .component-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 26px;
+  }
 }
 </style>
