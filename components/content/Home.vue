@@ -4,9 +4,9 @@
       <img class="home-img" src="~/assets/images/logo.png" />
       <div class="home-text">
         <h1 class="home-title">Clean UI</h1>
-        <a class="home-button-link" href="/start">
+        <nuxt-link class="home-button-link" to="/start">
           <button class="home-button">Get started</button>
-        </a>
+        </nuxt-link>
       </div>
       <div class="home-media">
         <MediaBadges />
@@ -14,6 +14,16 @@
     </div>
   </header>
 </template>
+
+<script>
+import MediaBadges from "~/components/MediaBadges.vue";
+
+export default {
+  components: {
+    MediaBadges,
+  },
+};
+</script>
 
 <style scoped lang="scss">
 .wrapper {
