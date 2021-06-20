@@ -1,6 +1,5 @@
 <template>
   <section class="wrapper">
-    <h1>Getting Started</h1>
     <p>Currently in development process</p>
   </section>
 </template>
@@ -19,8 +18,8 @@
     margin-top: 22px;
   }
 
-  h1,
   p {
+    font-size: 21px;
     margin: 0;
   }
 }

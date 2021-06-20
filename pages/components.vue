@@ -1,18 +1,19 @@
 <template>
-  <div id="wrapper">
-    <Navbar />
+  <div v-if="$nuxt.$route.path == '/components'">
     <Components />
+  </div>
+  <div v-else>
+    <NuxtChild />
   </div>
 </template>
 
 <script>
-import Navbar from "~/components/Navbar.vue";
 import Components from "~/components/content/Components.vue";
 
 export default {
   components: {
-    Navbar,
     Components,
   },
+  layout: "components",
 };
 </script>

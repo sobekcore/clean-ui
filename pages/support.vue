@@ -1,18 +1,16 @@
 <template>
-  <div id="wrapper">
-    <Navbar />
+  <div>
     <Support />
   </div>
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
 import Support from "~/components/content/Support.vue";
 
 export default {
   components: {
-    Navbar,
     Support,
   },
+  layout: "default",
 };
 </script>
