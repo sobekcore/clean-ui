@@ -57,7 +57,7 @@
     }
 
     .components-sidebar-item:hover {
-      transform: translateX(6px);
+      transform: translateX(7px);
     }
   }
 

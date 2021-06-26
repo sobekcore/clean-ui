@@ -34,6 +34,23 @@ export default {
       default: "Component",
     },
   },
+  watch: {
+    $route() {
+      if (this.$route.hash === "") {
+        this.setAnyHash("#design");
+      }
+    },
+  },
+  mounted() {
+    if (this.$route.hash === "") {
+      this.setAnyHash("#design");
+    }
+  },
+  methods: {
+    setAnyHash(param) {
+      this.$router.push({ path: this.$route.path, hash: param });
+    },
+  },
 };
 </script>
 
@@ -62,6 +79,8 @@ export default {
     gap: 24px;
 
     .component-header-nav-link {
+      border-top: 2px solid $light-gray;
+      border-bottom: 2px solid $light-gray;
       text-align: center;
       width: 100%;
 
@@ -70,12 +89,16 @@ export default {
         align-items: center;
         justify-content: center;
         background: $light-gray;
-        padding: 12px;
+        padding: 10px 12px;
 
         & > .material-icons {
           margin-right: 5px;
         }
       }
+    }
+
+    .nuxt-link-active {
+      border-bottom: 2px solid $main-pink;
     }
   }
 }

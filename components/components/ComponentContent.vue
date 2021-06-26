@@ -1,6 +1,8 @@
 <template>
   <article class="component-content">
-    <slot name="content"></slot>
+    <slot v-if="$nuxt.$route.hash == '#implementation'" name="implementation"></slot>
+    <slot v-else-if="$nuxt.$route.hash == '#code'" name="code"></slot>
+    <slot v-else name="design"></slot>
   </article>
 </template>
 
@@ -13,10 +15,6 @@
 
   @media (max-width: $medium-content) {
     box-shadow: 0 1px 3px rgb(0 0 0 / 10%), inset 0 1px 3px rgb(0 0 0 / 10%);
-  }
-
-  .component-section-header:not(:first-child) {
-    margin: 34px 0 8px;
   }
 }
 </style>
