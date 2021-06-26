@@ -17,7 +17,7 @@
   .component-section-header {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     width: 100%;
 
     .component-section-title {
@@ -35,6 +35,10 @@
       width: 100%;
       height: 3px;
     }
+  }
+
+  .component-section-text {
+    margin: 0;
   }
 }
 </style>

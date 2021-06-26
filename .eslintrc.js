@@ -17,6 +17,8 @@ module.exports = {
     ".eslintrc.js"
   ],
   rules: {
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    "prefer-const": "off",
+    "eqeqeq": "warn"
   }
 }

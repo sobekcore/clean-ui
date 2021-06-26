@@ -1,0 +1,14 @@
+{
+  "name": "@cleanlabs/clean-ui",
+  "version": "0.0.2",
+  "author": "Sobek",
+  "description": "The cleanest UI library for HTML, CSS and JavaScript on your websites.",
+  "license": "ISC",
+  "main": "clean-ui.js",
+  "keywords": [
+    "ui",
+    "clean",
+    "library",
+    "component"
+  ]
+}
