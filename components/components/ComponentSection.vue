@@ -1,5 +1,10 @@
 <template>
-  <section class="component-section">
+  <section v-if="type == 'tooltip'" class="component-section">
+    <Tooltip>
+      <slot name="tooltip" />
+    </Tooltip>
+  </section>
+  <section v-else class="component-section">
     <div class="component-section-header">
       <h3 class="component-section-title">
         <slot name="title" />
@@ -11,6 +16,22 @@
     </p>
   </section>
 </template>
+
+<script>
+import Tooltip from "~/components/common/Tooltip.vue";
+
+export default {
+  components: {
+    Tooltip,
+  },
+  props: {
+    type: {
+      type: String,
+      default: "",
+    },
+  },
+};
+</script>
 
 <style scoped lang="scss">
 .component-section {

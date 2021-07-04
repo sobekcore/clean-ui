@@ -33,7 +33,7 @@
   position: fixed;
   background: white;
   border-right: 2px solid $light-gray;
-  box-shadow: 1px 0 3px rgb(0 0 0 / 10%), inset 0 1px 3px rgb(0 0 0 / 10%);
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1), inset 0 1px 3px rgba(0, 0, 0, 0.1);
   height: calc(100% - 60px);
   padding: 13px 8px;
   z-index: 99;

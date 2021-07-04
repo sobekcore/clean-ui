@@ -1,97 +1,81 @@
 <template>
   <div class="component">
-    <ComponentHeader title="Classic Button" />
-    <ComponentContent>
-      <template slot="design">
-        <ComponentSection class="component-section-wrapper">
-          <template slot="title">Component usage</template>
-          <template slot="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, orci eu
-            vestibulum molestie, felis augue aliquet tortor, vel luctus metus est eget dolor. Nulla
-            fermentum ligula vel tristique varius. Morbi ullamcorper ultrices leo id pulvinar.
-            Nullam condimentum massa augue, non dignissim purus sagittis sit amet. Curabitur eu
-            pharetra velit. Suspendisse condimentum arcu massa, sed faucibus leo mattis ac.
-          </template>
-        </ComponentSection>
+    <ComponentHeader>Classic Button</ComponentHeader>
+    <ClientOnly>
+      <ComponentContent>
+        <template slot="design">
+          <ComponentSection class="component-section-wrapper">
+            <template slot="title">Component usage</template>
+            <template slot="text">
+              Classic Button is a stock-standard button to use on your websites. It's code is really simple so
+              it wont drain your resources unnecessarily. Designed to look good on the most of the website
+              layouts out there.
+            </template>
+          </ComponentSection>
 
-        <ComponentSection class="component-section-wrapper">
-          <template slot="title">Design profile</template>
-          <template slot="text">
-            Nunc eu nisl posuere, rutrum est consectetur, rutrum metus. Sed hendrerit elit sed enim
-            placerat finibus. Quisque tincidunt, risus nec vehicula interdum, orci sem accumsan
-            erat, in consequat enim mi quis enim. Aenean non sapien orci. Donec condimentum, dolor
-            quis laoreet ultricies, erat lectus sodales felis, et facilisis nisl tortor non elit.
-            Etiam dignissim consequat scelerisque. Fusce at pretium leo, at bibendum elit. Maecenas
-            dictum dolor sit amet orci efficitur congue. Aliquam erat volutpat.
-          </template>
-        </ComponentSection>
+          <ComponentSection class="component-section-wrapper">
+            <template slot="title">Design profile</template>
+            <template slot="text">
+              Classic Button has a rather gentle design, it presents a well-known and familiar style for most
+              of the users. The button fits best as a informational or a slightly more important button.
+            </template>
+          </ComponentSection>
 
-        <ComponentSection class="component-section-wrapper">
-          <template slot="title">Customization</template>
-          <template slot="text">
-            Fusce ornare consequat consequat. Maecenas cursus odio a ante pulvinar volutpat. Integer
-            id blandit ipsum. Vestibulum mattis vitae lorem ut efficitur. Praesent purus dolor,
-            volutpat a dui at, dignissim porta nisi. Nam rutrum commodo odio, at maximus enim
-            molestie in. Aliquam tempor ultrices mauris nec blandit. Quisque eget sodales felis.
-            Morbi in libero euismod tellus cursus eleifend. Quisque non lectus sollicitudin, viverra
-            magna non, auctor tortor. Praesentlacinia nunc vel erat tristique aliquet.
-          </template>
-        </ComponentSection>
-      </template>
+          <ComponentSection class="component-section-wrapper">
+            <template slot="title">Customization</template>
+            <template slot="text">
+              Classic Button is a customizable UI component. For now it has 2 options, both of them are
+              optional. First one is a main color of a button (the one that fills button on hover) and the
+              second one is a secondary button color (the one that button is filled at the beginning).
+            </template>
+          </ComponentSection>
+        </template>
 
-      <template slot="implementation">
-        <ComponentSection class="component-section-wrapper">
-          <template slot="title">Implementation</template>
-          <template slot="text">
-            <!-- eslint-disable -->
+        <template slot="implementation">
+          <ComponentSection class="component-section-wrapper">
+            <template slot="title">Implementation</template>
+            <template slot="text">
+              <!-- eslint-disable -->
+<CodeArea lang="html">
+    &lt;button class="cui-classic-button"&gt;Classic Button&lt;/button&gt;
+</CodeArea>
 <CodeArea lang="js">
     CleanUI._Buttons.ClassicButton(
         "#ea596e", // primary color
         "#ffffff" // secondary color
     );
 </CodeArea>
-            <!-- eslint-enable -->
-            Nunc eu nisl posuere, rutrum est consectetur, rutrum metus. Sed hendrerit elit sed enim
-            placerat finibus. Quisque tincidunt, risus nec vehicula interdum, orci sem accumsan
-            erat, in consequat enim mi quis enim. Aenean non sapien orci. Donec condimentum, dolor
-            quis laoreet ultricies, erat lectus sodales felis, et facilisis nisl tortor non elit.
-            Etiam dignissim consequat scelerisque. Fusce at pretium leo, at bibendum elit. Maecenas
-            dictum dolor sit amet orci efficitur congue. Aliquam erat volutpat.
-          </template>
-        </ComponentSection>
-      </template>
+              <!-- eslint-enable -->
+              To implement such a button you need to have any of the necesary object instances for it
+              initialized, and to do so you need to have library imported into your project with the way of
+              your choice. If the instance allows to pass parameters you can do so. To properly implement
+              library into your code you need to have both HTML and JavaScript added.
+            </template>
+          </ComponentSection>
+        </template>
 
-      <template slot="code">
-        <ComponentSection class="component-section-wrapper">
-          <template slot="title">Code</template>
-          <template slot="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, orci eu
-            vestibulum molestie, felis augue aliquet tortor, vel luctus metus est eget dolor. Nulla
-            fermentum ligula vel tristique varius. Morbi ullamcorper ultrices leo id pulvinar.
-            Nullam condimentum massa augue, non dignissim purus sagittis sit amet. Curabitur eu
-            pharetra velit. Suspendisse condimentum arcu massa, sed faucibus leo mattis ac.
-          </template>
-        </ComponentSection>
-        <ComponentSection class="component-section-wrapper">
-          <template slot="title">HTML</template>
-          <template slot="text">
-            <!-- eslint-disable -->
+        <template slot="code">
+          <ComponentSection class="component-section-wrapper" type="tooltip">
+            <template slot="tooltip">
+              Please, have in mind that source Code of our components is still somewhat experimental feature.
+              However we place great emphasis on our code transparency so everyone can know what they are
+              dealing with.
+            </template>
+          </ComponentSection>
+          <ComponentSection class="component-section-wrapper">
+            <template slot="title">HTML</template>
+            <template slot="text">
+              <!-- eslint-disable -->
 <CodeArea lang="html">
     &lt;button class="cui-classic-button"&gt;Classic Button&lt;/button&gt;
 </CodeArea>
-            <!-- eslint-enable -->
-            Nunc eu nisl posuere, rutrum est consectetur, rutrum metus. Sed hendrerit elit sed enim
-            placerat finibus. Quisque tincidunt, risus nec vehicula interdum, orci sem accumsan
-            erat, in consequat enim mi quis enim. Aenean non sapien orci. Donec condimentum, dolor
-            quis laoreet ultricies, erat lectus sodales felis, et facilisis nisl tortor non elit.
-            Etiam dignissim consequat scelerisque. Fusce at pretium leo, at bibendum elit. Maecenas
-            dictum dolor sit amet orci efficitur congue. Aliquam erat volutpat.
-          </template>
-        </ComponentSection>
-        <ComponentSection class="component-section-wrapper">
-          <template slot="title">CSS</template>
-          <template slot="text">
-            <!-- eslint-disable -->
+              <!-- eslint-enable -->
+            </template>
+          </ComponentSection>
+          <ComponentSection class="component-section-wrapper">
+            <template slot="title">CSS</template>
+            <template slot="text">
+              <!-- eslint-disable -->
 <CodeArea lang="css">
     .cui-classic-button {
         border: 2px solid #ea596e;
@@ -111,21 +95,17 @@
         cursor: pointer;
     }
 </CodeArea>
-            <!-- eslint-enable -->
-            Fusce ornare consequat consequat. Maecenas cursus odio a ante pulvinar volutpat. Integer
-            id blandit ipsum. Vestibulum mattis vitae lorem ut efficitur. Praesent purus dolor,
-            volutpat a dui at, dignissim porta nisi. Nam rutrum commodo odio, at maximus enim
-            molestie in. Aliquam tempor ultrices mauris nec blandit. Quisque eget sodales felis.
-            Morbi in libero euismod tellus cursus eleifend. Quisque non lectus sollicitudin, viverra
-            magna non, auctor tortor. Praesentlacinia nunc vel erat tristique aliquet.
-          </template>
-        </ComponentSection>
-      </template>
-    </ComponentContent>
+              <!-- eslint-enable -->
+            </template>
+          </ComponentSection>
+        </template>
+      </ComponentContent>
+    </ClientOnly>
   </div>
 </template>
 
 <script>
+import CleanUI from "@cleanlabs/clean-ui";
 import ComponentHeader from "~/components/components/ComponentHeader.vue";
 import ComponentContent from "~/components/components/ComponentContent.vue";
 import ComponentSection from "~/components/components/ComponentSection.vue";
@@ -137,6 +117,9 @@ export default {
     ComponentContent,
     ComponentSection,
     CodeArea,
+  },
+  mounted() {
+    CleanUI._Buttons.ClassicButton();
   },
 };
 </script>

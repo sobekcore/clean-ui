@@ -17,7 +17,11 @@ module.exports = {
     ".eslintrc.js"
   ],
   rules: {
-    "prettier/prettier": "warn",
+    "prettier/prettier": [
+      "warn", {
+        "printWidth": 110
+      }
+    ],
     "prefer-const": "off",
     "eqeqeq": "warn"
   }
