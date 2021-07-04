@@ -1,11 +1,31 @@
-/* :root START; */
+/**
+ * Clean UI
+ * (c) 2021-2021 Sobek
+ * sobekcore@gmail.com
+ */
+
+/* Imports START; */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+/* Imports END; */
+
+/* Globals START; */
 :root {
-  --cui-classic-button-primary: #ea596e;
-  --cui-classic-button-secondary: #ffffff;
+  --cui-standard-color: #ea596e; /* rgb(234, 89, 110); */
 }
-/* :root END; */
+
+.material-icons-outlined,
+.material-icons {
+  user-select: none;
+}
+/* Globals END; */
 
 /* Classic Button START; */
+:root {
+  --cui-classic-button-primary: var(--cui-standard-color);
+  --cui-classic-button-secondary: #ffffff;
+}
+
 .cui-classic-button {
   border: 2px solid var(--cui-classic-button-primary);
   color: var(--cui-classic-button-primary);
@@ -24,3 +44,32 @@
   cursor: pointer;
 }
 /* Classic Button END; */
+
+/* Tooltip START; */
+:root {
+  --cui-tooltip-color: var(--cui-standard-color);
+  --cui-tooltip-color-opaque: rgba(234, 89, 110, 0.15);
+}
+
+.cui-tooltip {
+  display: flex;
+  border: 2px solid var(--cui-tooltip-color);
+  border-radius: 6px;
+}
+
+.cui-tooltip-icon,
+.cui-tooltip-text {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.cui-tooltip-icon {
+  background: var(--cui-tooltip-color-opaque);
+}
+
+.cui-tooltip-material-icon.material-icons-outlined,
+.cui-tooltip-text {
+  color: var(--cui-tooltip-color);
+}
+/* Tooltip END; */

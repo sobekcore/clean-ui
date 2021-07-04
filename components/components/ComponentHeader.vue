@@ -1,7 +1,7 @@
 <template>
   <header class="component-header">
     <h2 class="component-header-title">
-      {{ title }}
+      <slot></slot>
     </h2>
     <nav class="component-header-nav">
       <NuxtLink class="component-header-nav-link" :to="$nuxt.$route.path + '#design'">

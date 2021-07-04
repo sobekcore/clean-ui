@@ -6,3 +6,6 @@
 
 # build
 /.nuxt
+
+# local playground
+/pages/playground.vue
