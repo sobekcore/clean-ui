@@ -58,7 +58,7 @@ export default {
 .component-header {
   background: white;
   border-bottom: 2px solid $light-gray;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 26px;
   padding: 24px;
 

@@ -10,11 +10,11 @@
 .component-content {
   background: white;
   border-bottom: 2px solid $light-gray;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 22px 20px;
 
   @media (max-width: $medium-content) {
-    box-shadow: 0 1px 3px rgb(0 0 0 / 10%), inset 0 1px 3px rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 }
 </style>

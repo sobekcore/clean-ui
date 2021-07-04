@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
 
 /** Global stylesheet styling **/
 * {
@@ -22,6 +23,7 @@ body {
 }
 
 span.material-icons,
+span.material-icons-outlined,
 img {
   user-select: none;
 }

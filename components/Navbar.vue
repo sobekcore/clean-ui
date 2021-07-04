@@ -32,7 +32,7 @@
     position: fixed;
     background: white;
     border-bottom: 2px solid $light-gray;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: inline-flex;
     width: 100%;
     z-index: 99;
