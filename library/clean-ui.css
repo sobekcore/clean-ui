@@ -12,6 +12,8 @@
 /* Globals START; */
 :root {
   --cui-standard-color: #ea596e; /* rgb(234, 89, 110); */
+  --cui-white-color: #ffffff; /* rgb(255, 255, 255); */
+  --cui-black-color: #000000; /* rgb(0, 0, 0); */
 }
 
 .material-icons-outlined,
@@ -23,7 +25,7 @@
 /* Classic Button START; */
 :root {
   --cui-classic-button-primary: var(--cui-standard-color);
-  --cui-classic-button-secondary: #ffffff;
+  --cui-classic-button-secondary: var(--cui-white-color);
 }
 
 .cui-classic-button {
@@ -73,3 +75,37 @@
   color: var(--cui-tooltip-color);
 }
 /* Tooltip END; */
+
+/* Percantage START; */
+:root {
+  --cui-percantage-primary: var(--cui-standard-color);
+  --cui-percantage-secondary: var(--cui-white-color);
+}
+
+.cui-percantage {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.cui-percantage-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  max-height: 180px;
+  width: 100%;
+  overflow-y: scroll;
+  background: var(--cui-white-color);
+  border: 1px solid var(--cui-black-color);
+  border-radius: 0 0 0 6px;
+  border-top: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cui-percantage-item:hover {
+  background: var(--cui-percantage-primary);
+  color: var(--cui-percantage-secondary);
+  cursor: pointer;
+}
+/* Percantage END; */

@@ -15,6 +15,10 @@ if (typeof document !== "undefined") {
     let b = parseInt(rgb.substring(str + 4, str + 6), 16);
     return `${r}, ${g}, ${b}`;
   }
+
+  function insertNodeBefore(anchor, item) {
+    return anchor.parentNode.insertBefore(item, anchor.nextElementSibling);
+  }
   /* Common functions END; */
 
   const _Root = document.querySelector(":root");
@@ -27,6 +31,51 @@ if (typeof document !== "undefined") {
       if (secondary !== undefined) {
         _Root.style.setProperty("--cui-classic-button-secondary", secondary);
       }
+    },
+  };
+
+  const _Pickers = {
+    Percantage: (primary, secondary, hide = true) => {
+      if (primary !== undefined) {
+        _Root.style.setProperty("--cui-percantage-primary", primary);
+      }
+      if (secondary !== undefined) {
+        _Root.style.setProperty("--cui-percantage-secondary", secondary);
+      }
+
+      let percantageInput = document.querySelectorAll(".cui-percantage-input");
+      percantageInput.forEach((input) => {
+        let percantageList = document.createElement("ul");
+        percantageList.className = "cui-percantage-list";
+        insertNodeBefore(input, percantageList);
+
+        for (let i = 0; i <= 10; i++) {
+          let percantageItem = document.createElement("li");
+          percantageItem.className = "cui-percantage-item";
+          percantageItem.innerHTML = 10 * i + "%";
+          percantageList.appendChild(percantageItem);
+        }
+
+        window.addEventListener("click", function (e) {
+          if (input.parentElement.contains(e.target)) {
+            input.nextElementSibling.style.display = "block";
+          } else {
+            input.nextElementSibling.style.display = "none";
+          }
+        });
+      });
+
+      let percantageItem = document.querySelectorAll(".cui-percantage-item");
+      percantageItem.forEach((item) => {
+        item.addEventListener("click", function () {
+          this.parentElement.previousElementSibling.value = this.innerHTML;
+          if (hide === true) {
+            setTimeout(() => {
+              this.parentElement.style.display = "none";
+            }, 1);
+          }
+        });
+      });
     },
   };
 
@@ -61,11 +110,13 @@ if (typeof document !== "undefined") {
 
   module.exports._Root = _Root;
   module.exports._Buttons = _Buttons;
+  module.exports._Pickers = _Pickers;
   module.exports._Helpers = _Helpers;
 
   module.exports.CleanUI = {
     _Root,
     _Buttons,
+    _Pickers,
     _Helpers,
   };
 }

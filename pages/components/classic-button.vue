@@ -105,7 +105,7 @@
 </template>
 
 <script>
-import CleanUI from "@cleanlabs/clean-ui";
+import { _Buttons } from "@cleanlabs/clean-ui";
 import ComponentHeader from "~/components/components/ComponentHeader.vue";
 import ComponentContent from "~/components/components/ComponentContent.vue";
 import ComponentSection from "~/components/components/ComponentSection.vue";
@@ -119,7 +119,7 @@ export default {
     CodeArea,
   },
   mounted() {
-    CleanUI._Buttons.ClassicButton();
+    _Buttons.ClassicButton();
   },
 };
 </script>
