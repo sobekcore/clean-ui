@@ -6,7 +6,7 @@ Our website has transparent contents of our services for users. <br>
 
 _Currently very early work in progress._
 
-## Components:
+### Components:
 #### Classic Button
 Classic Button is a stock-standard button to use on your websites. It's code is really simple so
 it wont drain your resources unnecessarily. Designed to look good on the most of the website

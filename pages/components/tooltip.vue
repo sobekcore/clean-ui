@@ -1,6 +1,9 @@
 <template>
   <div class="component">
     <ComponentHeader>Tooltip</ComponentHeader>
+    <ComponentPreview>
+      <div class="cui-tooltip">This is a example Tooltip.</div>
+    </ComponentPreview>
     <ClientOnly>
       <ComponentContent>
         <template slot="design">
@@ -118,7 +121,9 @@
 </template>
 
 <script>
+import { _Helpers } from "~/library/clean-ui";
 import ComponentHeader from "~/components/components/ComponentHeader.vue";
+import ComponentPreview from "~/components/components/ComponentPreview.vue";
 import ComponentContent from "~/components/components/ComponentContent.vue";
 import ComponentSection from "~/components/components/ComponentSection.vue";
 import CodeArea from "~/components/common/CodeArea.vue";
@@ -126,9 +131,13 @@ import CodeArea from "~/components/common/CodeArea.vue";
 export default {
   components: {
     ComponentHeader,
+    ComponentPreview,
     ComponentContent,
     ComponentSection,
     CodeArea,
+  },
+  mounted() {
+    _Helpers.Tooltip();
   },
 };
 </script>

@@ -59,12 +59,7 @@ export default {
   background: white;
   border-bottom: 2px solid $light-gray;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 26px;
   padding: 24px;
-
-  @media (max-width: $medium-content) {
-    margin-bottom: 0;
-  }
 
   .component-header-title {
     font: 28px "IBM Plex Sans", sans-serif;

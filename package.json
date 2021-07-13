@@ -10,7 +10,7 @@
     "lint": "eslint --ext '.js,.vue' --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@cleanlabs/clean-ui": "^0.0.5",
+    "@cleanlabs/clean-ui": "^0.0.7",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "prismjs": "^1.23.0"

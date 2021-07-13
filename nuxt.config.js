@@ -25,5 +25,8 @@ export default {
   buildModules: [
     "@nuxtjs/eslint-module",
     "@nuxtjs/style-resources"
-  ]
+  ],
+  build: {
+    vendor: ["~/library/clean-ui.js"]
+  }
 }

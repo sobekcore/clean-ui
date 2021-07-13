@@ -1,6 +1,9 @@
 <template>
   <div class="component">
     <ComponentHeader>Percantage</ComponentHeader>
+    <ComponentPreview>
+      <input class="cui-percantage-input" />
+    </ComponentPreview>
     <ClientOnly>
       <ComponentContent>
         <template slot="design">
@@ -39,9 +42,7 @@
             <template slot="text">
               <!-- eslint-disable -->
 <CodeArea lang="html">
-    &lt;div class="cui-percantage"&gt;
-        &lt;input class="cui-percantage-input" /&gt;
-    &lt;/div&gt;
+    &lt;input class="cui-percantage-input" /&gt;
 </CodeArea>
 <CodeArea lang="js">
     CleanUI._Pickers.Percantage(
@@ -112,6 +113,7 @@
         background: #ffffff;
         border: 1px solid #000000;
         border-radius: 0 0 0 6px;
+        text-align: center;
         border-top: none;
         padding: 0;
         margin: 0;
@@ -133,7 +135,9 @@
 </template>
 
 <script>
+import { _Pickers } from "~/library/clean-ui";
 import ComponentHeader from "~/components/components/ComponentHeader.vue";
+import ComponentPreview from "~/components/components/ComponentPreview.vue";
 import ComponentContent from "~/components/components/ComponentContent.vue";
 import ComponentSection from "~/components/components/ComponentSection.vue";
 import CodeArea from "~/components/common/CodeArea.vue";
@@ -141,9 +145,13 @@ import CodeArea from "~/components/common/CodeArea.vue";
 export default {
   components: {
     ComponentHeader,
+    ComponentPreview,
     ComponentContent,
     ComponentSection,
     CodeArea,
+  },
+  mounted() {
+    _Pickers.Percantage();
   },
 };
 </script>
@@ -157,6 +165,14 @@ export default {
   @media (max-width: $medium-content) {
     max-width: 1252px;
     margin: 0;
+  }
+
+  .cui-percantage {
+    .cui-percantage-input {
+      border: 2px solid gray;
+      padding: 6px 8px;
+      border-radius: 6px;
+    }
   }
 
   // Content margin settings for each section

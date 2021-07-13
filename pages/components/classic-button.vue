@@ -1,6 +1,9 @@
 <template>
   <div class="component">
     <ComponentHeader>Classic Button</ComponentHeader>
+    <ComponentPreview>
+      <button class="cui-classic-button">Classic Button</button>
+    </ComponentPreview>
     <ClientOnly>
       <ComponentContent>
         <template slot="design">
@@ -44,7 +47,9 @@
         "#ea596e", // primary color
         "#ffffff" // secondary color
     );
-</CodeArea>
+</CodeArea>    <ComponentPreview>
+      <button class="cui-classic-button">Classic Button</button>
+    </ComponentPreview>
               <!-- eslint-enable -->
               To implement such a button you need to have any of the necesary object instances for it
               initialized, and to do so you need to have library imported into your project with the way of
@@ -82,7 +87,6 @@
         color: #ea596e;
         background: #ffffff;
         padding: 10px 18px;
-        margin: 3px 6px;
         border-radius: 4px;
         font-size: 16px;
         transition: 0.12s background, 0.12s color;
@@ -105,8 +109,9 @@
 </template>
 
 <script>
-import { _Buttons } from "@cleanlabs/clean-ui";
+import { _Buttons } from "~/library/clean-ui";
 import ComponentHeader from "~/components/components/ComponentHeader.vue";
+import ComponentPreview from "~/components/components/ComponentPreview.vue";
 import ComponentContent from "~/components/components/ComponentContent.vue";
 import ComponentSection from "~/components/components/ComponentSection.vue";
 import CodeArea from "~/components/common/CodeArea.vue";
@@ -114,6 +119,7 @@ import CodeArea from "~/components/common/CodeArea.vue";
 export default {
   components: {
     ComponentHeader,
+    ComponentPreview,
     ComponentContent,
     ComponentSection,
     CodeArea,
