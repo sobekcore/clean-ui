@@ -42,15 +42,30 @@ implement select fields that are highly cutomizable in visual aspects and well a
 ones.
 
 ``` html
-<div class="cui-percantage">
-    <input class="cui-percantage-input" />
-</div>
+<input class="cui-percantage-input" />
 ```
 ``` js
 CleanUI._Pickers.Percantage(
     "#ea596e", // primary color
     "#ffffff", // secondary color
     "true" // close on click
+);
+```
+
+#### Toggle
+Toggle switcher is a widely used component as a replacement for classic checkbox. For some of
+the usage either checkbox or toggle switcher may be beter depending on the action you want to
+represent.
+
+``` html
+<input class="cui-toggle-input" />
+```
+``` js
+CleanUI._Systemic.Toggle(
+    "#ea596e", // active color
+    "#c8c8c8", // background color
+    "#ffffff", // switch color
+    "26px" // border radius
 );
 ```
 

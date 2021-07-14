@@ -170,7 +170,7 @@ export default {
   .cui-percantage {
     .cui-percantage-input {
       border: 2px solid gray;
-      padding: 6px 8px;
+      padding: 8px 12px;
       border-radius: 6px;
     }
   }

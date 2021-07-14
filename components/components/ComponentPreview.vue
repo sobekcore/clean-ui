@@ -26,6 +26,8 @@
     padding: 0 54px 38px;
 
     .component-preview-content-offset {
+      display: flex;
+      align-items: center;
       position: relative;
       margin-top: -38px;
       z-index: 1;

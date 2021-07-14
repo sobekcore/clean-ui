@@ -47,9 +47,7 @@
         "#ea596e", // primary color
         "#ffffff" // secondary color
     );
-</CodeArea>    <ComponentPreview>
-      <button class="cui-classic-button">Classic Button</button>
-    </ComponentPreview>
+</CodeArea>
               <!-- eslint-enable -->
               To implement such a button you need to have any of the necesary object instances for it
               initialized, and to do so you need to have library imported into your project with the way of
