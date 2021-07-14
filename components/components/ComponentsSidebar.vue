@@ -22,6 +22,9 @@
     </NuxtLink>
 
     <h3 class="components-sidebar-title">Systemic</h3>
+    <NuxtLink class="components-sidebar-link" to="/components/toggle">
+      <div class="components-sidebar-item">Toggle</div>
+    </NuxtLink>
     <NuxtLink class="components-sidebar-link" to="/components/slider">
       <div class="components-sidebar-item">Slider</div>
     </NuxtLink>

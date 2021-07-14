@@ -1,8 +1,8 @@
 <template>
   <div class="component">
-    <ComponentHeader>Percantage</ComponentHeader>
+    <ComponentHeader>Toggle</ComponentHeader>
     <ComponentPreview>
-      <input class="cui-percantage-input" />
+      <input class="cui-toggle-input" />
     </ComponentPreview>
     <ClientOnly>
       <ComponentContent>
@@ -10,28 +10,29 @@
           <ComponentSection class="component-section-wrapper">
             <template slot="title">Component usage</template>
             <template slot="text">
-              Percantage picker is a native HTML's select inspired component. With it it's really easy to
-              implement select fields that are highly cutomizable in visual aspects and well as functional
-              ones.
+              Toggle switcher is a widely used component as a replacement for classic checkbox. For some of
+              the usage either checkbox or toggle switcher may be beter depending on the action you want to
+              represent.
             </template>
           </ComponentSection>
 
           <ComponentSection class="component-section-wrapper">
             <template slot="title">Design profile</template>
             <template slot="text">
-              Percantage picker has a cleaned-up design of a classic HTML select tag. Small details like
-              smoother responses or nicer hover effects add clutch functionalities that define the usage of
-              those kind of components.
+              Our toggle has a really classical and familiar design. It has inherited from a modern standards
+              of how toggles on the web look like. Any user will recognize it's design and purpose on the
+              first glance.
             </template>
           </ComponentSection>
 
           <ComponentSection class="component-section-wrapper">
             <template slot="title">Customization</template>
             <template slot="text">
-              Percantage picker is a customizable component that changes its look and functionalities
-              depending on passed parameters. There are three parameters to pass in, first one is a primary
-              color which is a main hover color, second one is a color of a text on hover, and the last one is
-              a boolean value which defines if the drop-down should close after clicking on its values or not.
+              Toggle is a customizable UI component. It can take up to 4 parameters which change diferent
+              things. The first one changes main color of the toggle when its turned on, the second one
+              changes color of the background when its off. The third one changes color of the switcher
+              circle, and the fourth one changes border radius of a whole switcher, so you can make it fully
+              circular or square-ish etc.
             </template>
           </ComponentSection>
         </template>
@@ -42,19 +43,20 @@
             <template slot="text">
               <!-- eslint-disable -->
 <CodeArea lang="html">
-    &lt;input class="cui-percantage-input" /&gt;
+    &lt;input class="cui-toggle-input" /&gt;
 </CodeArea>
 <CodeArea lang="js">
-    CleanUI._Pickers.Percantage(
-        "#ea596e", // primary color
-        "#ffffff", // secondary color
-        "true" // close on click
+    CleanUI._Systemic.Toggle(
+        "#ea596e", // active color
+        "#c8c8c8", // background color
+        "#ffffff", // switch color
+        "26px" // border radius
     );
 </CodeArea>
               <!-- eslint-enable -->
-              This percantage picker is a adaptation of native &lt;select&gt; HTML tag. However it is more
-              customozable in its look and actions. Under the hood it adds a lot of DOM elements in various
-              loops to save your time in doing so. Made very clean and efficient.
+              To add such a toggle into your UI you need to have proper object instance initialized, as well
+              as it being imported into you project. To properly implement library into your code you need to
+              have both HTML and JavaScript added.
             </template>
           </ComponentSection>
         </template>
@@ -72,21 +74,11 @@
             <template slot="text">
               <!-- eslint-disable -->
 <CodeArea lang="html">
-    &lt;div class="cui-percantage"&gt;
-        &lt;input class="cui-percantage-input" /&gt;
-        &lt;ul class="cui-percantage-list"&gt;
-            &lt;li class="cui-percantage-item"&gt;0%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;10%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;20%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;30%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;40%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;50%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;60%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;70%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;80%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;90%&lt;/li&gt;
-            &lt;li class="cui-percantage-item"&gt;100%&lt;/li&gt;
-        &lt;/ul&gt;
+    &lt;div class="cui-toggle"&gt;
+        &lt;div class="cui-toggle-cover"&gt;
+            &lt;div class="cui-toggle-switch"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input class="cui-toggle-input" /&gt;
     &lt;/div&gt;
 </CodeArea>
               <!-- eslint-enable -->
@@ -97,32 +89,41 @@
             <template slot="text">
               <!-- eslint-disable -->
 <CodeArea lang="css">
-    .cui-percantage {
+    .cui-toggle {
         position: relative;
         display: inline-block;
+        text-align: center;
         z-index: 1;
     }
 
-    .cui-percantage-list {
-        display: none;
+    .cui-toggle-input {
         position: absolute;
-        list-style: none;
-        max-height: 180px;
-        width: 100%;
-        overflow-y: scroll;
-        background: #ffffff;
-        border: 1px solid #000000;
-        border-radius: 0 0 0 6px;
-        text-align: center;
-        border-top: none;
-        padding: 0;
+        transform: translate(-30px, -30px);
+        border-radius: 26px;
+        height: 30px;
+        width: 60px;
+        cursor: pointer;
         margin: 0;
+        opacity: 0;
     }
 
-    .cui-percantage-item:hover {
-        background: #ea596e;
-        color: #ffffff;
-        cursor: pointer;
+    .cui-toggle-cover {
+        background: #c8c8c8;
+        border: 2px solid #c8c8c8;
+        border-radius: 26px;
+        height: 30px;
+        width: 60px;
+        padding: 2px 3px;
+        transition: 0.18s ease;
+    }
+
+    .cui-toggle-switch {
+        background: #ffffff;
+        border-radius: 26px;
+        height: 22px;
+        width: 22px;
+        margin-left: 0px;
+        transition: 0.12s ease;
     }
 </CodeArea>
               <!-- eslint-enable -->
@@ -135,7 +136,7 @@
 </template>
 
 <script>
-import { _Pickers } from "~/library/clean-ui";
+import { _Systemic } from "~/library/clean-ui";
 import ComponentHeader from "~/components/components/ComponentHeader.vue";
 import ComponentPreview from "~/components/components/ComponentPreview.vue";
 import ComponentContent from "~/components/components/ComponentContent.vue";
@@ -151,7 +152,7 @@ export default {
     CodeArea,
   },
   mounted() {
-    _Pickers.Percantage();
+    _Systemic.Toggle();
   },
 };
 </script>
@@ -165,14 +166,6 @@ export default {
   @media (max-width: $medium-content) {
     max-width: 1252px;
     margin: 0;
-  }
-
-  .cui-percantage {
-    .cui-percantage-input {
-      border: 2px solid gray;
-      padding: 8px 12px;
-      border-radius: 6px;
-    }
   }
 
   // Content margin settings for each section
